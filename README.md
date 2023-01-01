@@ -1,4 +1,4 @@
-# cryptography
+# RSA Encryption converter
 
 An RSA Encryption Algorithm encoder and decoder that I made for a college discrete math class. The converter takes input in english and translates the message to a comma separated encrypted message. 
 
