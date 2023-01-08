@@ -2,7 +2,7 @@
 
 This is an RSA Encryption Algorithm encoder and decoder that I made for a college discrete math class. The converter takes input in English and translates the message to a comma separated encrypted message. 
 
-RSA encryption starts by assigning A to 1 B to 2, and all letters are assigned numerically 1-26. The user can choose a value to assign for comma and space. Commas are unsupported currently as the program uses commas as a delimiter. 
+RSA encryption starts by assigning A to 1, B to 2, and all letters are assigned (1-26). The user can choose a value to assign for comma and space. Commas are unsupported currently as the program uses commas as a delimiter. 
 
 The RSA encryption algorithm is applied to each letter and the output is sent to the GUI. The user can encrypt messages using the RSA algorithm and decrypt encrypted messages into plain English.
 
