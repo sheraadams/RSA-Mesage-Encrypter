@@ -1,10 +1,12 @@
 # RSA Encryption converter
 
-An RSA Encryption Algorithm encoder and decoder that I made for a college discrete math class. The converter takes input in English and translates the message to a comma separated encrypted message. 
+This is an RSA Encryption Algorithm encoder and decoder that I made for a college discrete math class. The converter takes input in English and translates the message to a comma separated encrypted message. 
 
-Encrypted comma separated messages can be decrypted into plain English. 
+RSA encryption starts by assigning A to 1 B to 2, and all letters are assigned numerically 1-26. The user can choose a value to assign for comma and space. Commas are unsupported currently as the program uses commas as a delimiter. 
+
+The RSA encryption algorithm is applied to each letter and the output is sent to the GUI. The user can encrypt messages using the RSA algorithm and decrypt encrypted messages into plain English.
+
+The user can also choose to convert messages that are comma separated to space separated messages if desired.
 
 
-![crpt1](https://user-images.githubusercontent.com/110789514/209883785-9e201c66-6f7e-4b62-9aea-0f9dc104dbec.png)
-
-https://www.youtube.com/watch?v=0xsl333A1_8
+![1](https://user-images.githubusercontent.com/110789514/211207573-2d18b736-bb81-44fe-93db-e25347e5705b.png)
