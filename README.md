@@ -10,7 +10,7 @@ The user can also choose to convert messages that are comma separated to space s
 
 ## License
 
-All other code in this repository is licensed under a [APACHE LICENSE, VERSION 2.0](LICENSE-CODE).
+All code in this repository is licensed under a [APACHE LICENSE, VERSION 2.0](LICENSE-CODE).
 
 
 <p align="center">
