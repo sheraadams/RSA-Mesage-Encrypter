@@ -1,12 +1,6 @@
 ## Documentation
 
-This is an RSA Encryption Algorithm encoder and decoder. The converter takes input in English and translates the message to a comma separated encrypted message. 
-
-RSA encryption starts by assigning A to 1, B to 2, and all letters are assigned (1-26). The user can choose a value to assign for comma and space. Commas are unsupported currently as the program uses commas as a delimiter. 
-
-The RSA encryption algorithm is applied to each letter and the output is sent to the GUI. The user can encrypt messages using the RSA algorithm and decrypt encrypted messages into plain English.
-
-The user can also choose to convert messages that are comma separated to space separated messages if desired.
+RSA Algorithm Encryptor and decryptor takes input in English and translates the message to a comma separated encrypted message. The user can choose a value to assign for comma and space. The tool also can convert comma separated strings to space separated strings if desired.
 
 ## License
 
