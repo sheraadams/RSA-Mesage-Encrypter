@@ -1,6 +1,6 @@
 ## Documentation
 
-RSA Algorithm Encryptor and decryptor takes input in English and translates the message to a comma separated encrypted message. The user can choose a value to assign for comma and space. The tool also can convert comma separated strings to space separated strings if desired.
+RSA Algorithm Encrypter and decrypter takes input in English and translates the message to a comma separated encrypted message. The user can choose a value to assign for comma and space. The tool also can convert comma separated strings to space separated strings if desired.
 
 ## License
 
