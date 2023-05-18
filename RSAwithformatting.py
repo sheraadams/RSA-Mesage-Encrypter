@@ -68,73 +68,73 @@ def encrypt():
     d = 10-p
 
     # get input from textbox and convert to list, print to console
-    elmessage = uinput.get("1.0", "end-1c").lower()
-    messagelist1 = list(elmessage)
-    print(messagelist1)
+    messageInput = uinput.get("1.0", "end-1c").lower()
+    messagelist = list(messageInput)
+    print(messagelist)
 
     # convert alpha to numeric a = 1, b = 2 etc
-    for i in range(len(messagelist1)):
-        if messagelist1[i] == 'a':
-            messagelist1[i] = '1'
-        if messagelist1[i] == 'b':
-            messagelist1[i] = '2'
-        if messagelist1[i] == 'c':
-            messagelist1[i] = '3'
-        if messagelist1[i] == 'd':
-            messagelist1[i] = '4'
-        if messagelist1[i] == 'e':
-            messagelist1[i] = '5'
-        if messagelist1[i] == 'f':
-            messagelist1[i] = '6'
-        if messagelist1[i] == 'g':
-            messagelist1[i] = '7'
-        if messagelist1[i] == 'h':
-            messagelist1[i] = '8'
-        if messagelist1[i] == 'i':
-            messagelist1[i] = '9'
-        if messagelist1[i] == 'j':
-            messagelist1[i] = '10'
-        if messagelist1[i] == 'k':
-            messagelist1[i] = '11'
-        if messagelist1[i] == 'l':
-            messagelist1[i] = '12'
-        if messagelist1[i] == 'm':
-            messagelist1[i] = '13'
-        if messagelist1[i] == 'n':
-            messagelist1[i] = '14'
-        if messagelist1[i] == 'o':
-            messagelist1[i] = '15'
-        if messagelist1[i] == 'p':
-            messagelist1[i] = '16'
-        if messagelist1[i] == 'q':
-            messagelist1[i] = '17'
-        if messagelist1[i] == 'r':
-            messagelist1[i] = '18'
-        if messagelist1[i] == 's':
-            messagelist1[i] = '19'
-        if messagelist1[i] == 't':
-            messagelist1[i] = '20'
-        if messagelist1[i] == 'u':
-            messagelist1[i] = '21'
-        if messagelist1[i] == 'v':
-            messagelist1[i] = '22'
-        if messagelist1[i] == 'w':
-            messagelist1[i] = '23'
-        if messagelist1[i] == 'x':
-            messagelist1[i] = '24'
-        if messagelist1[i] == 'y':
-            messagelist1[i] = '25'
-        if messagelist1[i] == 'z':
-            messagelist1[i] = '26'
-        if messagelist1[i] == " ":
-            messagelist1[i] = space
-        if messagelist1[i] == '.':
-            messagelist1[i] = period
+    for i in range(len(messagelist)):
+        if messagelist[i] == 'a':
+            messagelist[i] = '1'
+        if messagelist[i] == 'b':
+            messagelist[i] = '2'
+        if messagelist[i] == 'c':
+            messagelist[i] = '3'
+        if messagelist[i] == 'd':
+            messagelist[i] = '4'
+        if messagelist[i] == 'e':
+            messagelist[i] = '5'
+        if messagelist[i] == 'f':
+            messagelist[i] = '6'
+        if messagelist[i] == 'g':
+            messagelist[i] = '7'
+        if messagelist[i] == 'h':
+            messagelist[i] = '8'
+        if messagelist[i] == 'i':
+            messagelist[i] = '9'
+        if messagelist[i] == 'j':
+            messagelist[i] = '10'
+        if messagelist[i] == 'k':
+            messagelist[i] = '11'
+        if messagelist[i] == 'l':
+            messagelist[i] = '12'
+        if messagelist[i] == 'm':
+            messagelist[i] = '13'
+        if messagelist[i] == 'n':
+            messagelist[i] = '14'
+        if messagelist[i] == 'o':
+            messagelist[i] = '15'
+        if messagelist[i] == 'p':
+            messagelist[i] = '16'
+        if messagelist[i] == 'q':
+            messagelist[i] = '17'
+        if messagelist[i] == 'r':
+            messagelist[i] = '18'
+        if messagelist[i] == 's':
+            messagelist[i] = '19'
+        if messagelist[i] == 't':
+            messagelist[i] = '20'
+        if messagelist[i] == 'u':
+            messagelist[i] = '21'
+        if messagelist[i] == 'v':
+            messagelist[i] = '22'
+        if messagelist[i] == 'w':
+            messagelist[i] = '23'
+        if messagelist[i] == 'x':
+            messagelist[i] = '24'
+        if messagelist[i] == 'y':
+            messagelist[i] = '25'
+        if messagelist[i] == 'z':
+            messagelist[i] = '26'
+        if messagelist[i] == " ":
+            messagelist[i] = space
+        if messagelist[i] == '.':
+            messagelist[i] = period
 
     # print to console convert to string, strip commas and format appropriately
-    print(messagelist1)
-    print("messagelist1 string")
-    tempmessagestr = str(messagelist1)
+    print(messagelist)
+    print("messagelist string")
+    tempmessagestr = str(messagelist)
     print(tempmessagestr)
     print("temp message string")
 
@@ -195,7 +195,7 @@ def decode():
 
     # get input from the gui text entry box
     word2 = uinput3.get("1.0", "end-1c").lower()
-    decry = word2.lower()
+    decoded = word2.lower()
 
     # initialize variables
     p  = 3
@@ -208,22 +208,22 @@ def decode():
     d = 10-p
 
     # remove leading zeros and evaluate as digits
-    for i in range(len(decry)):
-        decry = decry.replace('01', '1')
-        decry = decry.replace('02', '2')
-        decry = decry.replace('03', '3')
-        decry = decry.replace('04', '4')
-        decry = decry.replace('05', '5')
-        decry = decry.replace('06', '6')
-        decry = decry.replace('07', '7')
-        decry = decry.replace('08', '8')
-        decry = decry.replace('09', '9')
+    for i in range(len(decoded)):
+        decoded = decoded.replace('01', '1')
+        decoded = decoded.replace('02', '2')
+        decoded = decoded.replace('03', '3')
+        decoded = decoded.replace('04', '4')
+        decoded = decoded.replace('05', '5')
+        decoded = decoded.replace('06', '6')
+        decoded = decoded.replace('07', '7')
+        decoded = decoded.replace('08', '8')
+        decoded = decoded.replace('09', '9')
     decmessage = []
 
-    decry2 = [int(item) for item in decry.split(',') if item.isdigit()]
+    decodedtemp = [int(item) for item in decoded.split(',') if item.isdigit()]
 
     # iterate through list applying rsa decryption algorithm and append decrypted elements to new list
-    for i in decry2:
+    for i in decodedtemp:
         i = (i ** d) % n
         print(i, end=', ')
         decmessage.append(i)
