@@ -13,7 +13,7 @@ purple= "#7954A1"
 back = "#278ED5"
 contrast = "#AFFF26"
 window = Tk()
-window.geometry("720x720")  # was 720 x 420
+window.geometry("620x620")  # was 720 x 420
 window.configure(bg=purple)
 window.title("RSA Encryption and Decryption Generator")
 
@@ -211,13 +211,13 @@ def decode():
     chatb3.insert(END, decstr)
 
 
-# gui pack layout
-path = '2.png'
-img= ImageTk.PhotoImage(Image.open(path))
+# logo optional
+#path = '2.png'
+#img= ImageTk.PhotoImage(Image.open(path))
+#panel = tk.Label(window, fg= purple, image = img, borderwidth=0, highlightthickness=0)
+#panel.image = img
+#panel.pack()
 
-panel = tk.Label(window, fg= purple, image = img, borderwidth=0, highlightthickness=0)
-panel.image = img
-panel.pack()
 label1 = Label(window, bg= purple, fg= contrast, font='Helvetica 10 bold', text="Key: p=3, q=11, e=3. Encryption: x^e %n Decryption: x^(10-e) %n", pady=5)
 label1.pack()
 label3 = Label(window, bg= purple, fg= contrast, font='Helvetica 10 bold', text="Encrypt: Enter a message to encrypt", pady=8)
