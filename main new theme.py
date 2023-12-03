@@ -5,16 +5,18 @@ import tkinter as tk
 
 from PIL import Image, ImageTk
 import time
+
+
 #colors
-button_color = "#bc86fb"
-box_color= "#03dbc5"
+button_color = "#BB86FC" # lavender
+box_color= "#03dbc5" # teal
 button_text_color = "#000000"
-bg_color= "#000000"
-text_color = "#bc86fb"
+bg_color= "#1c1b1f"   # dark slate
+text_color = "#BB86FC"  # lavender
 
 # window dimesions and color
 window = Tk()
-window.geometry("720x1000")  # was 720 x 420
+window.geometry("880x1000") 
 window.configure(bg=bg_color)
 window.title("RSA Encryption and Decryption Generator")
 
@@ -314,16 +316,11 @@ def decode():
 
 
 # gui pack layout
-# Open the image file
 from PIL import Image
 
 # Open the image file
 from PIL import Image, ImageTk
-
-# Specify the path to the image file
 path = '2lavender.png'
-
-# Open the image
 image = Image.open(path)
 
 # Create a PhotoImage object from the original image
@@ -336,7 +333,7 @@ panel.image = img
 panel.pack()
 
 # window to get input for number to assign to space
-label4 = Label(window, bg= bg_color, fg= text_color, font='Helvetica 10 bold', text="Assign space to a unique number (27-32)", pady=8)
+label4 = Label(window, bg= bg_color, fg= text_color, font='helvetica 9 bold', text="Assign space to a unique number (27-32)", pady=8)
 label4.pack()
 # value
 uinput_value4 = StringVar(window)
@@ -347,7 +344,7 @@ uinput4.pack()
 
 # window to get input for number to assign to period
 # label
-label6 = Label(window, bg= bg_color, fg= text_color, font='Helvetica 10 bold', text="Assign period (27-32)", pady=8)
+label6 = Label(window, bg= bg_color, fg= text_color, font='helvetica 9 bold', text="Assign period (27-32)", pady=8)
 label6.pack()
 # entry value
 uinput_value6 = StringVar(window)
@@ -356,7 +353,7 @@ uinput6 = Text(window, height=1, width=65, bg=box_color)
 uinput6.pack()
 
 # label enter message to encrypt
-label3 = Label(window, bg= bg_color, fg= text_color, font='Helvetica 10 bold', text="Encrypt: Enter a message to encrypt", pady=8)
+label3 = Label(window, bg= bg_color, fg= text_color, font='helvetica 9 bold', text="Encrypt: Enter a message to encrypt", pady=8)
 label3.pack()
 # value
 uinput_value = StringVar(window)
@@ -380,7 +377,7 @@ button02.pack()
 
 # window for text entry for message to decrypt
 # label
-label2 = Label(window, bg= bg_color, fg= text_color, font='Helvetica 10 bold', text="Decrypt: Enter a message to decrypt", pady=8)
+label2 = Label(window, bg= bg_color, fg= text_color, font='helvetica 9 bold', text="Decrypt: Enter a message to decrypt", pady=8)
 label2.pack()
 #value
 uinput_value3 = StringVar(window)
@@ -406,7 +403,7 @@ button3.pack()
 
 # window for output comma to space
 # label
-label7 = Label(window, bg= bg_color, fg= text_color, font='Helvetica 10 bold', text="To convert a comma separated string enter it below:", pady=8)
+label7 = Label(window, bg= bg_color, fg= text_color, font='helvetica 9 bold', text="To convert a comma separated string enter it below:", pady=8)
 label7.pack()
 uinput_value7 = StringVar(window)
 uinput7 = Text(window, height=2, width=65, bg=box_color)
@@ -426,7 +423,7 @@ button4.pack()
 
 
 # label
-label1 = Label(window, bg= bg_color, fg= text_color, font='Helvetica 10 bold', text="Using Key: p=3, q=11, e=3. Encryption: x^e %n Decryption: x^(10-e) %n", pady=5)
+label1 = Label(window, bg= bg_color, fg= text_color, font='helvetica 9 bold', text="Using Key: p=3, q=11, e=3. Encryption: x^e %n Decryption: x^(10-e) %n", pady=5)
 label1.pack()
 
 
