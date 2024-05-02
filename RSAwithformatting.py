@@ -1,10 +1,7 @@
-import statistics
 from tkinter import*
-import math
 import tkinter as tk
-
 from PIL import Image, ImageTk
-import time
+
 #colors
 dpurple = "#C55FFC"
 lpurple= "#EFDCF9"
@@ -41,7 +38,6 @@ def encrypt():
     space = uinput4.get("1.0", "end-1c").lower()
     # get input from textbox for value to assign to period
     period = uinput6.get("1.0", "end-1c").lower()
-
 
     # convert user input string to a digit
     if space.isdigit():
@@ -144,6 +140,7 @@ def encrypt():
         tempmessagestr = tempmessagestr.replace(' ', '')
         tempmessagestr = tempmessagestr.replace('[', '')
         tempmessagestr = tempmessagestr.replace(']', '')
+
     encrypted = list(tempmessagestr.split(","))
     print(encrypted)
     print("encrypted string")
@@ -155,7 +152,6 @@ def encrypt():
 
     # convert numeric to string and format single digits to be preceded by 0s
     en = [str(x) for x in encrypt1]
-
 
     en = str(encrypt1)
     print(en)
@@ -192,7 +188,6 @@ def decode():
     chatb3.delete("1.0", END)
     chatb3.insert(END, notifyInvalid)
 
-
     # get input from the gui text entry box
     word2 = uinput3.get("1.0", "end-1c").lower()
     decoded = word2.lower()
@@ -227,6 +222,7 @@ def decode():
         i = (i ** d) % n
         print(i, end=', ')
         decmessage.append(i)
+
     # iterate through list and assign numeric to alpha 1=a, b =2 etc
     for i in range(len(decmessage)):
         if decmessage[i] == 1:
@@ -288,7 +284,6 @@ def decode():
     j = 1
     decstr = str(decmessage)
 
-
     # strip unwanted characters
     while j == 1:
         for character in decstr:
@@ -313,7 +308,6 @@ def decode():
     chatb3.delete("1.0", END)
     chatb3.insert(END, decstr)
 
-
 # gui pack layout
 path = '2.png'
 img= ImageTk.PhotoImage(Image.open(path))
@@ -331,7 +325,6 @@ uinput_value4 = StringVar(window)
 # entry
 uinput4 = Text(window, height=1, width=65, bg=lpurple)
 uinput4.pack()
-
 
 # window to get input for number to assign to period
 # label
@@ -352,7 +345,6 @@ uinput_value = StringVar(window)
 uinput = Text(window, height=5, width=65, bg=lpurple)
 uinput.pack()
 
-
 # text window for output message encrypted
 label4 = Label(window, bg= purple, fg= lpurple, font='Helvetica 9 bold', text="Encrypted message:", pady=5)
 label4.pack()
@@ -364,7 +356,6 @@ label2 = Label(window, bg= purple, fg= lpurple, font='Helvetica 9 bold', text=""
 label2.pack()
 button02 = Button(window, bg= dpurple, fg=lpurple, height=1, width=10, text="Encrypt",command=lambda: encrypt())
 button02.pack()
-
 
 # window for text entry for message to decrypt
 # label
@@ -382,15 +373,12 @@ lab5.pack()
 chatb3 = Text(window, height=5,width=65, bg=lpurple)
 chatb3.pack()
 
-
-
 #Label
 lab6 = Label(window, bg= purple, fg= lpurple, font='Helvetica 9 bold', text="", pady=0)
 lab6.pack()
 # Decrypt button
 button3 = Button(window, bg= dpurple, fg=lpurple, height=1, width=10, text="Decrypt",command=lambda: decode())
 button3.pack()
-
 
 # window for output comma to space
 # label
@@ -412,11 +400,9 @@ lab9.pack()
 button4 = Button(window, bg= dpurple, fg=lpurple, height=1, width=10, text="to Space",command=lambda: toSpace())
 button4.pack()
 
-
 # label
 label1 = Label(window, bg= purple, fg= contrast, font='Helvetica 10 bold', text="Using Key: p=3, q=11, e=3. Encryption: x^e %n Decryption: x^(10-e) %n", pady=5)
 label1.pack()
-
 
 window.mainloop()
 start()

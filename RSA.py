@@ -1,19 +1,17 @@
 from tkinter import Tk, Label, Text, Button, END
-from PIL import Image, ImageTk
 
 # Color dictionary
 colors = {
-    "dpurple": "#C55FFC",
-    "lpurple": "#EFDCF9",
-    "dark": "#323E42",
-    "purple": "#7954A1",
-    "back": "#278ED5",
-    "contrast": "#AFFF26"
+    "button_color": "#BB86FC", # lavender
+    "bg_color": "#1c1b1f",  # dark slate
+    "box_color": "#03dbc5", # teal
+    "button_text_color": "#000000",  # black
+    "text_color": "#BB86FC" # lavender
 }
 
 window = Tk()
 window.geometry("620x620")
-window.configure(bg=colors["purple"])
+window.configure(bg=colors["bg_color"])
 window.title("RSA Encryption and Decryption Generator")
 
 # Conversion functions
@@ -65,38 +63,38 @@ def decode():
     chatb3.insert(END, dec_str)
 
 # GUI elements
-label1 = Label(window, bg=colors["purple"], fg=colors["contrast"], font='Helvetica 10 bold',
+label1 = Label(window, bg=colors["bg_color"], fg=colors["text_color"], font='Helvetica 10 bold',
                text="Key: p=3, q=11, e=3. Encryption: x^e %n Decryption: x^(10-e) %n", pady=5)
 label1.pack()
 
-label3 = Label(window, bg=colors["purple"], fg=colors["contrast"], font='Helvetica 10 bold', text="Encrypt: Enter a message to encrypt", pady=8)
+label3 = Label(window, bg=colors["bg_color"], fg=colors["text_color"], font='Helvetica 10 bold', text="Encrypt: Enter a message to encrypt", pady=8)
 label3.pack()
 
-uinput = Text(window, height=5, width=65, bg=colors["lpurple"])
+uinput = Text(window, height=5, width=65, bg=colors["box_color"])
 uinput.pack()
 
-label4 = Label(window, bg=colors["purple"], fg=colors["lpurple"], font='Helvetica 9 bold', text="Encrypted message:", pady=5)
+label4 = Label(window, bg=colors["bg_color"], fg=colors["button_text_color"], font='Helvetica 9 bold', text="Encrypted message:", pady=5)
 label4.pack()
 
-entry4 = Text(window, height=5, width=65, bg=colors["lpurple"])
+entry4 = Text(window, height=5, width=65, bg=colors["box_color"])
 entry4.pack()
 
-button02 = Button(window, bg=colors["dpurple"], fg=colors["lpurple"], height=1, width=10, text="Encrypt", command=encrypt)
+button02 = Button(window, bg=colors["button_color"], fg=colors["button_text_color"], height=1, width=10, text="Encrypt", command=encrypt)
 button02.pack()
 
-label2 = Label(window, bg=colors["purple"], fg=colors["contrast"], font='Helvetica 10 bold', text="Decrypt: Enter a message to decrypt", pady=8)
+label2 = Label(window, bg=colors["bg_color"], fg=colors["text_color"], font='Helvetica 10 bold', text="Decrypt: Enter a message to decrypt", pady=8)
 label2.pack()
 
-uinput3 = Text(window, height=5, width=65, bg=colors["lpurple"])
+uinput3 = Text(window, height=5, width=65, bg=colors["box_color"])
 uinput3.pack()
 
-lab5 = Label(window, bg=colors["purple"], fg=colors["lpurple"], font='Helvetica 9 bold', text="Decrypted message:", pady=5)
+lab5 = Label(window, bg=colors["bg_color"], fg=colors["button_text_color"], font='Helvetica 9 bold', text="Decrypted message:", pady=5)
 lab5.pack()
 
-chatb3 = Text(window, height=5, width=65, bg=colors["lpurple"])
+chatb3 = Text(window, height=5, width=65, bg=colors["box_color"])
 chatb3.pack()
 
-button3 = Button(window, bg=colors["dpurple"], fg=colors["lpurple"], height=1, width=10, text="Decrypt", command=decode)
+button3 = Button(window, bg=colors["button_color"], fg=colors["button_text_color"], height=1, width=10, text="Decrypt", command=decode)
 button3.pack()
 
 window.mainloop()
